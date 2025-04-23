@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            text-align: center;
+        }
+        input {
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Verificar Tipo de Triângulo</h1>
+    <form id="triangleForm">
+        <label for="a">Lado A:</label>
+        <input type="text" id="a" required><br>
+        <label for="b">Lado B:</label>
+        <input type="text" id="b" required><br>
+        <label for="c">Lado C:</label>
+        <input type="text" id="c" required><br>
+        <button type="button" onclick="verificarTriangulo()">Verificar</button>
+    </form>
+    <p id="resultado"></p>
+
+    <script>
+        function isNaNValue(value) {
+            return isNaN(parseFloat(value)) || !isFinite(value);
+        }
+
+        function verificarTriangulo() {
+            const a = document.getElementById('a').value;
+            const b = document.getElementById('b').value;
+            const c = document.getElementById('c').value;
+
+            const resultado = document.getElementById('resultado');
+
+            // Valida se os valores são números
+            if (isNaNValue(a) || isNaNValue(b) || isNaNValue(c)) {
+                resultado.textContent = "Por favor, insira valores numéricos válidos!";
+                return;
+            }
+
+            const ladoA = parseFloat(a);
+            const ladoB = parseFloat(b);
+            const ladoC = parseFloat(c);
+
+            // Verifica se forma um triângulo
+            if ((Math.abs(ladoB - ladoC) < ladoA && ladoA < (ladoB + ladoC)) &&
+                (Math.abs(ladoA - ladoC) < ladoB && ladoB < (ladoA + ladoC)) &&
+                (Math.abs(ladoA - ladoB) < ladoC && ladoC < (ladoA + ladoB))) {
+                
+                // Determina o tipo de triângulo
+                if (ladoA === ladoB && ladoB === ladoC) {
+                    resultado.textContent = "Forma um triângulo Equilátero.";
+                } else if (ladoA === ladoB || ladoB === ladoC || ladoA === ladoC) {
+                    resultado.textContent = "Forma um triângulo Isósceles.";
+                } else {
+                    resultado.textContent = "Forma um triângulo Escaleno.";
+                }
+            } else {
+                resultado.textContent = "Os valores inseridos não formam um triângulo.";
+            }
+        }
+    </script>
+</body>
+</html>
