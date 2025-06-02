@@ -1,4 +1,4 @@
-// ===== EXERCÍCIO 1: Retângulo =====
+// 1: Retângulo
 function Retangulo(base, altura) {
     this.base = base;
     this.altura = altura;
@@ -23,7 +23,7 @@ function Retangulo(base, altura) {
   }
   
   
-  // ===== EXERCÍCIO 2: Conta e Herança =====
+  // 2: Conta e Herança
   class Conta {
     constructor() {
       this._nomeCorrentista = "";
