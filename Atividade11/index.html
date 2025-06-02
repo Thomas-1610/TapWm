@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Exercício: Retângulo e Conta</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+    section {
+      margin-bottom: 40px;
+    }
+    label {
+      display: block;
+      margin-top: 10px;
+    }
+    input {
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Exercícios Interativos</h1>
+
+  <!-- EXERCÍCIO 1: RETÂNGULO -->
+  <section>
+    <h2>1. Cálculo da Área de um Retângulo</h2>
+    <label>Base: <input type="number" id="base" /></label>
+    <label>Altura: <input type="number" id="altura" /></label>
+    <button onclick="calcularAreaRetangulo()">Calcular Área</button>
+    <p id="resultadoRetangulo"><a id="m²"></a></p>
+  </section>
+
+  <!-- EXERCÍCIO 2: CONTA -->
+  <section>
+    <h2>2. Cadastro de Conta Corrente</h2>
+    <label>Nome: <input type="text" id="ccNome" /></label>
+    <label>Banco: <input type="text" id="ccBanco" /></label>
+    <label>Número da Conta: <input type="text" id="ccNumero" /></label>
+    <label>Saldo: <input type="number" id="ccSaldo" /></label>
+    <label>Saldo Especial: <input type="number" id="ccEspecial" /></label>
+    <button onclick="criarContaCorrente()">Criar Conta Corrente</button>
+    <p id="resultadoCorrente"></p>
+  </section>
+
+  <section>
+    <h2>2. Cadastro de Conta Poupança</h2>
+    <label>Nome: <input type="text" id="cpNome" /></label>
+    <label>Banco: <input type="text" id="cpBanco" /></label>
+    <label>Número da Conta: <input type="text" id="cpNumero" /></label>
+    <label>Saldo: <input type="number" id="cpSaldo" /></label>
+    <label>Juros (%): <input type="number" id="cpJuros" step="0.01" /></label>
+    <label>Data de Vencimento: <input type="date" id="cpVencimento" /></label>
+    <button onclick="criarContaPoupanca()">Criar Conta Poupança</button>
+    <p id="resultadoPoupanca"></p>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
