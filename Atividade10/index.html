@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Criação de Funcionário - 3 Formas</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+    section {
+      margin-bottom: 30px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    label {
+      display: block;
+      margin-top: 8px;
+    }
+    input {
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Criação do Objeto Funcionário1 - 3 Formas</h1>
+
+  <section>
+    <h2>1. Objeto Literal</h2>
+    <label>Matrícula: <input type="text" id="matricula1" /></label>
+    <label>Nome: <input type="text" id="nome1" /></label>
+    <label>Função: <input type="text" id="funcao1" /></label>
+    <button onclick="criarFuncionarioLiteral()">Criar Objeto Literal</button>
+    <p id="resultadoLiteral"></p>
+  </section>
+
+  <section>
+    <h2>2. Função Construtora</h2>
+    <label>Matrícula: <input type="text" id="matricula2" /></label>
+    <label>Nome: <input type="text" id="nome2" /></label>
+    <label>Função: <input type="text" id="funcao2" /></label>
+    <button onclick="criarFuncionarioConstrutor()">Criar via Função Construtora</button>
+    <p id="resultadoConstrutor"></p>
+  </section>
+
+  <section>
+    <h2>3. Classe ES6</h2>
+    <label>Matrícula: <input type="text" id="matricula3" /></label>
+    <label>Nome: <input type="text" id="nome3" /></label>
+    <label>Função: <input type="text" id="funcao3" /></label>
+    <button onclick="criarFuncionarioClasse()">Criar via Classe ES6</button>
+    <p id="resultadoClasse"></p>
+  </section>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
